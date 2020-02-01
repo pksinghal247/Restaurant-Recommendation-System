@@ -18,6 +18,10 @@ You  can download the dataset from kaggle using link
 ```data
   https://www.kaggle.com/himanshupoddar/zomato-bangalore-restaurants#zomato.csv
 ```  
+To Understand the working of this project, I have created a video that you can find in directory 
+```dir
+ Restaurant-Recommendation-System/Additional/Project_Video.mp4
+```
 
 You can find my pproject on the link below
 ```Link
