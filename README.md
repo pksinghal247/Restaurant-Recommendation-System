@@ -14,7 +14,12 @@ For This Project, You need to install few libraries of python
 
  pip3 install nltk
 ```
-You  caan download the dataset from kaggle using link
+You  can download the dataset from kaggle using link
 ```data
   https://www.kaggle.com/himanshupoddar/zomato-bangalore-restaurants#zomato.csv
 ```  
+
+You can find my pproject on the link below
+```Link
+http://13.127.218.217:5000/
+```
