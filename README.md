@@ -1,5 +1,5 @@
 # Restaurant-Recommendation-System
-Restaurant Recommendation System is a system used to recommend restaurant based on user's requirement like his/her location and Cuisine of his/her choice. It is filtering/Content based recommendation system. We have used the zomato data of banglore restaurants. This System requires User’s location within the Banglore city and the cuisine that user want to have and based on that recommend best restaurant to the user on the basis of the sentiment extracted from the previous reviews of the other users.
+Restaurant Recommendation System is a system used to recommend restaurant based on user's requirement like his/her location and Cuisine of his/her choice. It is filtering/Content based recommendation system. We have used the zomato data of banglore restaurants. This System requires User’s location within the Banglore city and the cuisine that user want to have and based on that recommend best restaurant to the user on the basis of the sentiment extracted from the previous reviews of the other users. I have used MmongoDB database that comes under NoSQL Databases to store the data of my restaurant to fetch  the restauraant faster as per the user requirement.
 
 For This Project, You need to install few libraries of python 
 
@@ -14,10 +14,28 @@ For This Project, You need to install few libraries of python
 
  pip3 install nltk
 ```
-You  can download the dataset from kaggle using link
+To install MongoDB Database in Ubuntu 18.04, type comand on Terminal 
+```cmd
+  sudo apt update
+  sudo apt install -y mongodb
+```
+
+Initial Dataset is 
 ```data
-  https://www.kaggle.com/himanshupoddar/zomato-bangalore-restaurants#zomato.csv
+  /Restaurant-Recommendation-System/Restaurant Recommendation System/zomato.zip
 ```  
+Final  Dataset to be imported on MongoDB is 
+```data
+   /Restaurant-Recommendation-System/Restaurant Recommendation System/final_Dataset.zip
+```
+first extract this data then import oon mongoDB dataabase  using command  on terminal : 
+```mongoDB
+ mongoimport -d restaurants -c data --type=json /Restaurant-Recommendation-System/Restaurant Recommendation System/final_Dataset.json
+ 
+ Where restaurants is database name
+ & data is the name of Collection
+```
+
 I have created a video and Project Report as well which helps you to understand how this project works and what is the flow oof this project Which you can find in directory 
 ```dir
  Restaurant-Recommendation-System/Restaurant Recommendation System/Additional/Project.mp4
