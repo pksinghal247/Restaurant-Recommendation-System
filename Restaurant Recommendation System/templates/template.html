@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel = "icon" type = "image/jpg" href = "https://mpng.pngfly.com/20180328/ydq/kisspng-logo-clip-art-r-5abbf1f7c2b2c1.8762448015222666157975.jpg">
+        <title>RestaurantGoNow</title>
+        <style>
+        p {
+        color: antiquewhite;
+        }
+        label {
+            color: antiquewhite;
+        }
+        option {
+            color: black;
+        }
+        table {
+            width: 90%;
+        }
+        div {
+            border-radius: 25px;
+
+        }
+        i,b {
+            color: aliceblue;
+        }
+        
+        body {
+            height: 150%
+    
+            /* Center and scale the image nicely */
+            
+            font-family: tahoma;
+            overflow-x: hidden;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: fixed;
+            background-attachment: fixed;
+            width: 100%;
+            background-image: url({{ url_for('static', filename='background.jpeg') }});
+        }
+        tr, th {
+            color: antiquewhite;
+            margin-left: 2px;
+            margin-right: 10px;
+            width: 90%
+        }
+        .effect:hover {
+            background: linear-gradient(40deg, #ffd86f, #fc6262) !important;
+        }
+        .hi-slide {
+                position: relative;
+                width: 1000px;
+                height: 292px;
+                margin: 115px auto 0;
+            }
+            .hi-slide .hi-prev,
+             .hi-slide .hi-next {
+                position: absolute;
+                top: 50%;
+                width: 40px;
+                height: 40px;
+                margin-top: 0px;
+                border-radius: 50px;
+                line-height: 40px;
+                text-align: center;
+                cursor: pointer;
+                background-color: white;
+                color: black;
+                transition: all 1s;
+                font-size: 30px;
+                font-weight: bold;
+            }
+            .hi-slide .hi-prev:hover,
+            .hi-slide .hi-next:hover {
+                opacity: 1;
+                background-color: rgb(163, 159, 159);
+            }
+
+            .hi-slide .hi-prev {
+                left: -70px;
+            }
+
+            .hi-slide .hi-prev::before {
+                content: '<';
+            }
+            .hi-slide .hi-next {
+                right: -75px;
+            }
+            .hi-slide .hi-next::before {
+                content: '>';
+            }
+            .hi-slide > ul {
+                list-style: none;
+                position: relative;
+                width: 1000px;
+                height: 292px;
+                margin: 0;
+                padding: 0;
+            }
+            .hi-slide > ul > li  {
+                overflow: hidden;
+                position: absolute;
+                z-index: 0;
+                left:  377px;
+                top: 147px;
+                width: 190px;
+                height: 120px;
+                margin: 0;
+                padding: 0;
+                border: 2px solid white;
+                background-color: #333;
+                cursor: pointer;
+                border-radius: 20px;
+            }
+            .hi-slide > ul > li > img {
+                height: 100%;
+                width: 150%;
+                background-position: center;
+            }
+            ul {
+                list-style-type:none;
+            }
+            img:hover {
+                height: 20px;
+                width: 20px;
+            }
+            .purple-gradient {
+                    color: white;
+                   background: linear-gradient(40deg, #ff6ec4, #7873f5) !important;
+            }
+            .purple-gradient:hover {
+                    color: white;
+                background: linear-gradient(40deg, #f857b8, #5c57f5) !important;
+            }
+            .peach-gradient {
+                    color: white;
+                background: linear-gradient(40deg, #ffd86f, #fc6262) !important;
+            }
+            .peach-gradient:hover {
+                    color: white;
+                background: linear-gradient(40deg, #fcce4f, #fc4a4a) !important;
+            }
+            select.peach {
+                background-color: transparent; 
+                color: antiquewhite;
+            }
+            .peach:hover {
+                color: black;
+                background: linear-gradient(40deg, #ffd86f, #fc6262) !important;
+            }
+    
+        </style>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <div class="container">
+            <a href="/" ><img src="{{ url_for('static', filename='logo1.png') }}" alt="Logo" style="float: left;margin-top: 13px; margin-left: 191px; height: 100px; width: 100px;"></a>
+            <h1 style="text-align: left; margin-left: 314px; margin-top: 45px;"><a href="/" style="text-decoration: none;"><b style="background: -webkit-linear-gradient(  #ffd86f, #fc6262);-webkit-background-clip: text;-webkit-text-fill-color: transparent;">Restaurant Recommondation System</b></a></h1>
+
+            <div style="height: 40px; width: 200px; margin-left: 500px;">
+                <form action="/" method="GET" style="float: left;">
+                    <input type="submit" value="Home" class="btn peach-gradient" style="float: left; font-weight: bold; margin-top: 10px; margin-bottom: 10px;">
+                </form>
+                <form action="/aboutUs" method="GET">
+                    <input type="submit" value="About" class="btn peach-gradient" style="margin-left:10px; font-weight: bold; margin-top: 10px; margin-bottom: 10px;">
+                </form>
+            </div>
+           
+
+            {% block code_block %}
+            {% endblock %}
+            <div class="footer-copyright text-center py-3" style="margin-top: 100px; height: 200px; width:620px;margin-left: 370px; text-align: left;">
+                <table>
+                    <tr>
+                        <td><i class="fa fa-copyright" aria-hidden="true"></i></td>
+                        <td><b> Copyright By:</b></td>
+                        <td><b> Praful Singhal</b></td>
+                    </tr>
+                    <tr>
+                        <td><i class="fa fa-envelope" aria-hidden="true"></i></td>
+                        <td style="width: 120px;"><b> Contact On : </b></td>
+                        <td><a href="https://mail.google.com/mail/?view=cm&fs=1&to=restaurantgonow@gmail.com" target="_blank" style="text-decoration: none;"><b> restaurantgonow@gmail.com</b></a></td>
+                    </tr>
+                    <tr>
+                        <td><i class="fa fa-map-marker" aria-hidden="true"></i></td>
+                        <td><b> Address: </b></td>
+                        <td><a href="https://goo.gl/maps/ZospJCEhX3FxK3kQ6"target="_blank" style="text-decoration: none;"><b> Sunbeam Infotech Private Limited, Phase 2, Hinjewadi Rajiv Gandhi Infotech Park, Hinjawadi, Pune, Maharashtra - 411057</a></b></td>
+                    </tr>
+                    <tr>
+                        <td><i class="fa fa-phone" aria-hidden="true"></i></td>
+                        <td><b> Contact No. :</b></td>
+                        <td><b> +91 9876543210</b></td>
+                    </tr>
+                </table>    
+            </div>
+        </div>
+</body>
+</html>

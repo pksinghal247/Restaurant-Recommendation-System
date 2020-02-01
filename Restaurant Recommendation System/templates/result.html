@@ -1,0 +1,106 @@
+{% extends "template.html" %}
+
+    {% block code_block %}
+
+        <h1 style="color: white; margin-left: 60px">Recommended Restaurants as You Search are : </h1><br>
+
+        {% if len == 0%}
+            <table align="center" style="width: 100%; border: 2px solid white; margin-left: 5px;" class="table table-responsive ">
+            <tr style="color: white;">
+                    <th>Sorry, No Restaurant Found For Your Search</th>
+            </tr>
+         {%else%}
+
+            {% if len > 10%}
+                {%for i in range(0, 10)%}
+                <div class="effect" style="border: 2px solid white; margin-top: 5px;">
+                    <table align="center" style="width: 100%; margin-left: 10px; margin-right:10px;" class="table-responsive">
+                        <tr>
+                            <td><b> Name :</b></td>
+                            <td><b> {{dict[i]['Name']}} </b></td>
+                        </tr>
+                        <tr>
+                            <td><b> Address :</b></td>
+                            <td><b> {{dict[i]['Address']}} </b></td>
+                        </tr>
+                        <tr>
+                            <td><b> Contact No. :</b></td>
+                            <td><b> {{dict[i]['phone']}} </b></td>
+                        </tr>
+                        <tr>
+                            <td><b> Cost for two :</b></td>
+                            <td><b> {{dict[i]['cost']}} </b></td>
+                        </tr>
+                        <tr>
+                            <td><b> Dishes Liked by People :</b></td>
+                            <td><b> {{dict[i]['dish_liked']}} </b></td>
+                        </tr>
+                        <tr>
+                            <td><b> Ratings :</b></td>
+                            <td><b> {{dict[i]['rate']}} </b></td>
+                        </tr>
+                        <tr>
+                            <td><b> Available Cuisines :</b></td>
+                            <td><b> {{dict[i]['cuisines']}} </b></td>
+                        </tr>
+                        <tr>
+                            <td><b> Online Order :</b></td>
+                            <td><b> {{dict[i]['online_order']}} </b></td>
+                        </tr>
+                        <tr>
+                            <td><b> Table Booking :</b></td>
+                            <td><b> {{dict[i]['book_table']}} </b></td>
+                        </tr>
+                    </table>
+                </div>
+
+                {%endfor%}
+            {%endif%}
+            {% if len <= 10%}
+                {%for i in range(0, len)%}
+                    <div class="effect" style="border: 2px solid white; margin-top: 5px;">
+                    <table align="center" style="width: 100%; margin-left: 10px; margin-right:10px;" class="table-responsive">
+                        <tr>
+                            <td><b> Name :</b></td>
+                            <td><b> {{dict[i]['Name']}} </b></td>
+                        </tr>
+                        <tr>
+                            <td><b> Address :</b></td>
+                            <td><b> {{dict[i]['Address']}} </b></td>
+                        </tr>
+                        <tr>
+                            <td><b> Contact No. :</b></td>
+                            <td><b> {{dict[i]['phone']}} </b></td>
+                        </tr>
+                        <tr>
+                            <td><b> Cost for two :</b></td>
+                            <td><b> {{dict[i]['cost']}} </b></td>
+                        </tr>
+                        <tr>
+                            <td><b> Dishes Liked by People :</b></td>
+                            <td><b> {{dict[i]['dish_liked']}} </b></td>
+                        </tr>
+                        <tr>
+                            <td><b> Ratings :</b></td>
+                            <td><b> {{dict[i]['rate']}} </b></td>
+                        </tr>
+                        <tr>
+                            <td><b> Available Cuisines :</b></td>
+                            <td><b> {{dict[i]['cuisines']}} </b></td>
+                        </tr>
+                        <tr>
+                            <td><b> Online Order :</b></td>
+                            <td><b> {{dict[i]['online_order']}} </b></td>
+                        </tr>
+                        <tr>
+                            <td><b> Table Booking :</b></td>
+                            <td><b> {{dict[i]['book_table']}} </b></td>
+                        </tr>
+                    </table>
+                    </div>
+                {%endfor%}
+            {%endif%}
+         {%endif%}
+        </table>
+
+    {% endblock %}

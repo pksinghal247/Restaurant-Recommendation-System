@@ -1,0 +1,181 @@
+{% extends "template.html" %}
+
+    {% block code_block %}
+        
+                
+    
+                <form action="/recommend" method="POST">
+                    <div class="form-group">
+                        <label for="">Location *</label>
+                        <select name="city" class="form-control peach" oninvalid="InvalidLocation(this);" oninput="InvalidLocation(this);" required>
+                            <option value="" disabled selected><----SELECT----></option>
+                            <option value="Banashankari">Banashankari</option>
+                            <option value="Bannerghatta Road">Bannerghatta Road</option>
+                            <option value="Basavanagudi">Basavanagudi</option>
+                            <option value="Bellandur">Bellandur</option>
+                            <option value="Brigade Road">Brigade Road</option>
+                            <option value="Brookefield">Brookefield</option>
+                            <option value="BTM">BTM</option>
+                            <option value="Church Street">Church Street</option>
+                            <option value="Electronic City">Electronic City</option>
+                            <option value="Frazer Town">Frazer Town</option>
+                            <option value="HSR">HSR</option>
+                            <option value="Indiranagar">Indiranagar</option>
+                            <option value="Jayanagar">Jayanagar</option>
+                            <option value="JP Nagar">JP Nagar</option>
+                            <option value="Kalyan Nagar">Kalyan Nagar</option>
+                            <option value="Kammanahalli">Kammanahalli</option>
+                            <option value="Koramangala 4th Block">Koramangala 4th Block</option>
+                            <option value="Koramangala 5th Block">Koramangala 5th Block</option>
+                            <option value="Koramangala 6th Block">Koramangala 6th Block</option>
+                            <option value="Koramangala 7th Block">Koramangala 7th Block</option>
+                            <option value="Lavelle Road">Lavelle Road</option>
+                            <option value="Malleshwaram">Malleshwaram</option>
+                            <option value="Marathahalli">Marathahalli</option>
+                            <option value="MG Road">MG Road</option>
+                            <option value="New BEL Road">New BEL Road</option>
+                            <option value="Old Airport Road">Old Airport Road</option>
+                            <option value="Rajajinagar">Rajajinagar</option>
+                            <option value="Residency Road">Residency Road</option>
+                            <option value="Sarjapur Road">Sarjapur Road</option>
+                            <option value="Whitefield">Whitefield</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Cuisines *</label>
+                        <select name="cuisines" class="form-control peach" oninvalid="InvalidCuisine(this);" oninput="InvalidCuisine(this);" required>
+                                <option value="" disabled selected><----SELECT----></option>
+                                <option value="Afghani">Afghani</option>
+                                <option value="African">African</option>
+                                <option value="American">American</option>
+                                <option value="Andhra">Andhra</option>
+                                <option value="Arabian">Arabian</option>
+                                <option value="Asian">Asian</option>
+                                <option value="Assamese">Assamese</option>
+                                <option value="Awadhi">Awadhi</option>
+                                <option value="Bakery">Bakery</option>
+                                <option value="Bar Food">Bar Food</option>
+                                <option value="BBQ">BBQ</option>
+                                <option value="Belgian">Belgian</option>
+                                <option value="Bengali">Bengali</option>
+                                <option value="Beverages">Beverages</option>
+                                <option value="Bihari">Bihari</option>
+                                <option value="Biryani">Biryani</option>
+                                <option value="Bohri">Bohri</option>
+                                <option value="British">British</option>
+                                <option value="Bubble Tea">Bubble Tea</option>
+                                <option value="Burger">Burger</option>
+                                <option value="Burmese">Burmese</option>
+                                <option value="Cafe">Cafe</option>
+                                <option value="Cantonese">Cantonese</option>
+                                <option value="Charcoal Chicken">Charcoal Chicken</option>
+                                <option value="Chettinad">Chettinad</option>
+                                <option value="Chinese">Chinese</option>
+                                <option value="Coffee">Coffee</option>
+                                <option value="Continental">Continental</option>
+                                <option value="Desserts">Desserts</option>
+                                <option value="European">European</option>
+                                <option value="Fast Food">Fast Food</option>
+                                <option value="Finger Food">Finger Food</option>
+                                <option value="French">French</option>
+                                <option value="German">German</option>
+                                <option value="Goan">Goan</option>
+                                <option value="Greek">Greek</option>
+                                <option value="Grill">Grill</option>
+                                <option value="Gujarati">Gujarati</option>
+                                <option value="Healthy Food">Healthy Food</option>
+                                <option value="Hyderabadi">Hyderabadi</option>
+                                <option value="Ice Cream">Ice Cream</option>
+                                <option value="Indonesian">Indonesian</option>
+                                <option value="Iranian">Iranian</option>
+                                <option value="Italian">Italian</option>
+                                <option value="Japanese">Japanese</option>
+                                <option value="Jewish">Jewish</option>
+                                <option value="Juices">Juices</option>
+                                <option value="Kashmiri">Kashmiri</option>
+                                <option value="Kebab">Kebab</option>
+                                <option value="Konkan">Konkan</option>
+                                <option value="Korean">Korean</option>
+                                <option value="Kerala">Kerala</option>
+                                <option value="Lebanese">Lebanese</option>
+                                <option value="Lucknowi">Lucknowi</option>
+                                <option value="Maharashtrian">Maharashtrian</option>
+                                <option value="Malaysian">Malaysian</option>
+                                <option value="Mangalorean">Mangalorean</option>
+                                <option value="Mediterranean">Mediterranean</option>
+                                <option value="Mexican">Mexican</option>
+                                <option value="Middle Eastern">Middle Eastern</option>
+                                <option value="Mithai">Mithai</option>
+                                <option value="Modern Indian">Modern Indian</option>
+                                <option value="Momos">Momos</option>
+                                <option value="Mughlai">Mughlai</option>
+                                <option value="Naga">Naga</option>
+                                <option value="Nepalese">Nepalese</option>
+                                <option value="North Eastern">North Eastern</option>
+                                <option value="North Indian">North Indian</option>
+                                <option value="Oriya">Oriya</option>
+                                <option value="Parsi">Parsi</option>
+                                <option value="Pizza">Pizza</option>
+                                <option value="Portuguese">Portuguese</option>
+                                <option value="Rajasthani">Rajasthani</option>
+                                <option value="Roast Chicken">Roast Chicken</option>
+                                <option value="Rolls">Rolls</option>
+                                <option value="Russian">Russian</option>
+                                <option value="Salad">Salad</option>
+                                <option value="Sandwich">Sandwich</option>
+                                <option value="Seafood">Seafood</option>
+                                <option value="Sindhi">Sindhi</option>
+                                <option value="Singaporean">Singaporean</option>
+                                <option value="Spanish">Spanish</option>
+                                <option value="Sri Lankan">Sri Lankan</option>
+                                <option value="South Indian">South Indian</option>
+                                <option value="Steak">Steak</option>
+                                <option value="Street Food">Street Food</option>
+                                <option value="Sushi">Sushi</option>
+                                <option value="Tea">Tea</option>
+                                <option value="Tex-Mex">Tex-Mex</option>
+                                <option value="Thai">Thai</option>
+                                <option value="Tibetan">Tibetan</option>
+                                <option value="Turkish">Turkish</option>
+                                <option value="Vegan">Vegan</option>
+                                <option value="Vietnamese">Vietnamese</option>
+                                <option value="Wraps">Wraps</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Search" class="btn btn-success">
+                        <input type="reset" value="Reset" class="btn btn-danger">
+                    </div>
+                    <script> 
+                        function InvalidLocation(textbox) { 
+                    
+                            if (textbox.value === '') { 
+                                textbox.setCustomValidity 
+                                        ('Please Select a Location.....!!!'); 
+                            } 
+                            else { 
+                                textbox.setCustomValidity(''); 
+                            } 
+                    
+                            return true; 
+                        } 
+                    </script> 
+
+                    <script> 
+                        function InvalidCuisine(textbox) { 
+                    
+                            if (textbox.value === '') { 
+                                textbox.setCustomValidity 
+                                        ('Please Select a Cuisine.....!!!'); 
+                            } 
+                            else { 
+                                textbox.setCustomValidity(''); 
+                            } 
+                    
+                            return true; 
+                        } 
+                    </script> 
+                </form>
+
+    
+    {% endblock %}

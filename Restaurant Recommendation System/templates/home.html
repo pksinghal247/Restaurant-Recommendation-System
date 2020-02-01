@@ -1,0 +1,51 @@
+{% extends "template.html" %}
+
+    {% block code_block %}
+    <div class="slide hi-slide">
+        <div class="hi-prev"></div>
+        <div class="hi-next"></div>
+        <ul>
+            <li>
+                <img src="http://www.badlegaindia.org/wp-content/uploads/2016/04/6.jpeg" alt="samosa">
+            </li>
+            <li>
+                    <img src="https://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/article_thumbnails/slideshows/best_and_worst_italian_dishes_slideshow/650x350_best_and_worst_italian_dishes_slideshow.jpg" alt="Noodles">
+            </li>
+            <li>
+                    <img src="https://i0.wp.com/www.agoda.com/wp-content/uploads/2019/05/Jeddah-food-Kabsa-national-dish-of-Saudi-Arabia.jpg" alt="biryani">
+            </li>
+            <li>
+                    <img src="http://anthillonline.com/wp-content/uploads/2012/11/craftychefprofile_551239_610_335.jpg" alt="Pasta">
+            </li>
+            <li>
+                    <img src="http://images.jdmagicbox.com/comp/def_content/pizza_outlets/default-pizza-outlets-3.jpg" alt="Pizza">
+            </li>
+            <li>
+                    <img src="https://assets3.thrillist.com/v1/image/2840883/size/tmg-article_default_mobile.jpg" alt="Burger">
+            </li>
+            <li>
+                    <img src="http://www.kenscommentary.org/wp-content/uploads/2019/05/0-5.jpg" alt="Cake">
+            </li>
+            <li>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVsg2UpfKq067Tedo3CGscttjT9KG1-htnEX0BXCHh4dOyiUAL&s" alt="Paneer">
+            </li>
+            <li>
+                    <img src="https://previews.123rf.com/images/dzmitrheld/dzmitrheld1806/dzmitrheld180600211/103702172-european-international-fusion-cuisine-a-beautiful-dish-on-a-white-plate-decorated-with-herbs-and-veg.jpg" alt="Nachos">
+            </li>
+            <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+            <script src="{{  url_for('static', filename='jquery.hislide.js') }}"></script>
+            <script>
+                $('.slide').hiSlide();
+            </script>
+        </ul>
+    </div>
+        <br><br><div class="form-group" style="margin-left: 350px;">
+            <form action="/index" method="GET" style="float: left;">
+                <input type="submit" value="Go For Recommondation" class="btn peach-gradient" style="font-weight: bold; margin-right: 70px; margin-bottom:20px;">
+            </form>
+            <form action="/analysis" method="GET">
+                <input type="submit" value="Go  For Analysis" class="btn peach-gradient" style="width:200px; font-weight: bold;">
+            </form>
+        </div>
+
+    {% endblock %}
