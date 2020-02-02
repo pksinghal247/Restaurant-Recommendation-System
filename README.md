@@ -42,7 +42,7 @@ I have created a video and Project Report as well which helps you to understand 
  Restaurant-Recommendation-System/Restaurant Recommendation System/Additional/Project__Report.pdf
 ```
 
-You can find my pproject on the link below
+You can find my project on the link below
 ```Link
 http://13.127.218.217:5000/
 ```
