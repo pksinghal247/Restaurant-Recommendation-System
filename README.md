@@ -28,7 +28,7 @@ Final  Dataset to be imported on MongoDB is
 ```data
    /Restaurant-Recommendation-System/Restaurant Recommendation System/final_Dataset.zip
 ```
-first extract this data then import on mongoDB dataabase  using command  on terminal : 
+first extract this data then import on mongoDB database  using command  on terminal : 
 ```mongoDB
  mongoimport -d restaurants -c data --type=json /Restaurant-Recommendation-System/Restaurant Recommendation System/final_Dataset.json
  
@@ -36,7 +36,7 @@ first extract this data then import on mongoDB dataabase  using command  on term
  & data is the name of Collection
 ```
 
-I have created a video and Project Report as well which helps you to understand how this project works and what is the flow oof this project Which you can find in directory 
+I have created a video and Project Report as well which helps you to understand how this project works and what is the flow of this project Which you can find in directory 
 ```dir
  Restaurant-Recommendation-System/Restaurant Recommendation System/Additional/Project.mp4
  Restaurant-Recommendation-System/Restaurant Recommendation System/Additional/Project__Report.pdf
